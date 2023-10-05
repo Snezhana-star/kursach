@@ -6,6 +6,7 @@
 
         @auth("web")
             <a href="{{ route("logout") }}" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1">Выйти</a>
+            <a href="{{ route("user.show", ["id"=>auth()->user()->id]) }}" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1">Личный кабинет</a>
         @endauth
 
         @guest("web")
