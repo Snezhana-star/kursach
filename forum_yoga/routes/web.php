@@ -21,6 +21,8 @@ Route::middleware("auth")->group(function (){
     Route::get('/logout', [\App\Http\Controllers\AuthController::class,'logout'])->name('logout');
     Route::post('/posts/comment/{id}', [\App\Http\Controllers\PostController::class,'comment'])->name('comment');
     Route::get('/user', [\App\Http\Controllers\UserController::class,'show'])->name('user.show');
+    Route::post('/posts/favorite/{id}', [\App\Http\Controllers\PostController::class,'favorite'])->name('favorite');
+
 
 
 });

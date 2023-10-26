@@ -21,7 +21,7 @@ class AuthController extends Controller
 
         if(auth("web")->attempt($data)) {
             $user = Auth::user();
-            return redirect(route("/"));
+            return redirect(route("home"));
         }
 
         return redirect(route("login"))->withErrors(["email" => "Пользователь не найден, либо данные введены не правильно"]);

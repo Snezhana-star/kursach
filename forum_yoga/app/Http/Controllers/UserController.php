@@ -1,18 +1,20 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\User;
+use App\Models\Post;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
+
 
 class UserController extends Controller
 {
     public function show(Request $request)
     {
         $user = $request->user();
+        $post = Post::all();
+
         return view('user.show', [
-            'user'=>$user
+            'user'=>$user,
+            'post'=>$post
         ]);
     }
 }

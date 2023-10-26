@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CommentForm;
+use App\Http\Requests\FavoriteForm;
+use App\Models\Favorite;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -27,6 +29,13 @@ class PostController extends Controller
         $post= Post::findOrFail($id);
 
         $post->comments()->create($request->validated());
+        return redirect(route("posts.show",$id));
+    }
+
+    public function favorite($id, FavoriteForm $request){
+        $post= Post::findOrFail($id);
+
+        $post->favorites()->create($request->validated());
         return redirect(route("posts.show",$id));
     }
 }
