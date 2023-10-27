@@ -38,4 +38,5 @@ class PostController extends Controller
         $post->favorites()->create($request->validated());
         return redirect(route("posts.show",$id));
     }
+
 }

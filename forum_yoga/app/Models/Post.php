@@ -14,6 +14,7 @@ class Post extends Model
         'title',
         'preview',
         'description',
+        'category',
         'thumbnail',
     ];
 
@@ -24,6 +25,10 @@ class Post extends Model
     public function favorites()
     {
         return $this->hasMany(Favorite::class)->orderBy("created_at", 'DESC');
+    }
+    public function categories()
+    {
+        return $this->belongsTo(Category::class);
     }
 
 }

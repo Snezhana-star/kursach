@@ -10,6 +10,11 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/forum_yoga/vendor/maize-tech/laravel-markable" />
       <excludeFolder url="file://$MODULE_DIR$/forum_yoga/vendor/spatie/laravel-package-tools" />
+      <excludeFolder url="file://$MODULE_DIR$/forum_yoga/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/forum_yoga/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/forum_yoga/vendor/doctrine/deprecations" />
+      <excludeFolder url="file://$MODULE_DIR$/forum_yoga/vendor/doctrine/event-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/forum_yoga/vendor/psr/cache" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
