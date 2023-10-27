@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CommentForm;
 use App\Http\Requests\FavoriteForm;
+use App\Models\Category;
 use App\Models\Favorite;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -12,9 +13,10 @@ class PostController extends Controller
 {
     public function index(){
         $posts= Post::query()->orderBy("created_at", "DESC")->paginate(5);
-        //dd($posts);
+        $category = Category::all();
         return view('posts.index',[
-            'posts'=>$posts
+            'posts'=>$posts,
+            'category'=>$category
         ]);
     }
 

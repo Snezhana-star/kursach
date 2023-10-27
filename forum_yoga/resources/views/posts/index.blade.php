@@ -3,7 +3,14 @@
 @section('title', 'Статьи')
 @section('content')
     @include('partials.header')
-
+    <div>
+{{--        @foreach($category as $cat)--}}
+{{--            {{$cat->name}}<br>--}}
+{{--            @foreach($cat->posts as $cat2)--}}
+{{--                {{$cat2->title}}<br>--}}
+{{--            @endforeach--}}
+{{--        @endforeach--}}
+    </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10 mb-20">
         @foreach($posts as $post)
             @include('posts.partials.item', ['post'=>$post])

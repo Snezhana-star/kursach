@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -20,7 +21,8 @@ class PostFactory extends Factory
             'title' => fake()->name(),
             'description' => fake()->text(),
             'preview' => fake()->text(100),
-            'thumbnail'=> fake()->image("public/storage/posts", 640, 520, null, false)
+            'thumbnail'=> fake()->image("public/storage/posts", 640, 520, null, false),
+            'category_id'=>Category::get()->random()->id
         ];
     }
 }
